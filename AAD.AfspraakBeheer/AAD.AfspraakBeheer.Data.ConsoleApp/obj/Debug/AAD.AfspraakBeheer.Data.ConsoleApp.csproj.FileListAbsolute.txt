@@ -1,0 +1,17 @@
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.exe.config
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.exe
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.pdb
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Common.dll
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Data.dll
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Common.pdb
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Data.pdb
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\AAD.AfspraakBeheer.Data.dll.config
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\obj\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\obj\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\obj\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.csproj.CopyComplete
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\obj\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.exe
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Data.ConsoleApp\obj\Debug\AAD.AfspraakBeheer.Data.ConsoleApp.pdb

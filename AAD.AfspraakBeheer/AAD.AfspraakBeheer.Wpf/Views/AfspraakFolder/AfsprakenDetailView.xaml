@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="AAD.AfspraakBeheer.Wpf.Views.AfspraakFolder.AfsprakenDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AAD.AfspraakBeheer.Wpf.Views.AfspraakFolder"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="errorTemplate" TargetType="{x:Type Control}">
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel>
+                            <Border>
+                                <AdornedElementPlaceholder x:Name="controlWithError"/>
+                            </Border>
+                            <Path HorizontalAlignment="Right"
+                                  VerticalAlignment="Top"
+                                  Width="10" Height="10"
+                                  Data="M0,0 L 1,0 1,1z"
+                                  Margin="-10,0,0,0"
+                                  Stretch="Fill"
+                                  ToolTip="{Binding Path=/ErrorContent}"
+                                  Fill="Red"/>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource errorTemplate}"/>
+    </UserControl.Resources>
+    <DockPanel LastChildFill="True" HorizontalAlignment="Left">
+        <StackPanel DockPanel.Dock="Bottom" VerticalAlignment="Center" Margin="10,0,10,0">
+            <Button Content="Bewaar" Command="{Binding BewaarCommand, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Grid.Row="3" Grid.Column="0" Margin="10,0,10,10" Padding="10,5" Background="#1A5276" FontWeight="Bold">
+            </Button>
+            <Button Content="Verwijder" Command="{Binding VerwijderCommand, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" Margin="10,0,10,10" Padding="10,5" Background="#1A5276" FontWeight="Bold"></Button>
+        </StackPanel>
+        <Grid DockPanel.Dock="Right" Width="250" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding Titel}" Margin="10,10,10,10" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Eigenaar:" Grid.Row="0" Grid.Column="0" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Agenda Soort:" Grid.Row="1" Grid.Column="0" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Id:" Grid.Row="2" Grid.Column="0" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Titel:" Grid.Row="3" Grid.Column="0" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Start tijd:" Grid.Row="4" Grid.Column="0" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="Eind tijd:" Grid.Row="5" Grid.Column="0" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="{Binding GeselecteerdeAfspraak.Eigenaar.Naam}" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Margin="10,1,1,1"></TextBlock>
+                <TextBlock Text="{Binding GeselecteerdeAfspraak.Agenda.Naam}" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="10,1,1,1"></TextBlock>
+                <TextBlock Text="{Binding GeselecteerdeAfspraak.AfspraakId}" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="10,1,1,1"></TextBlock>
+                <TextBox Text="{Binding GeselecteerdeAfspraak.Titel, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                         VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="10,1,1,1"></TextBox>
+                <TextBox Text="{Binding GeselecteerdeAfspraak.StartTijd, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Margin="10,1,1,1"></TextBox>
+                <TextBox Text="{Binding GeselecteerdeAfspraak.EindTijd, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Margin="10,1,1,1"></TextBox>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="AAD.AfspraakBeheer.Wpf.Views.AfspraakBeheerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AAD.AfspraakBeheer.Wpf.Views"
+             xmlns:converters="clr-namespace:AAD.AfspraakBeheer.Wpf"
+
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="250">
+    <UserControl.Resources>
+        <converters:AgendaNaarBrushValue x:Key="AgendaNaarBrushValue"/>
+    </UserControl.Resources>
+    <Grid>
+        <ListBox x:Name="lstAfspraken" ItemsSource="{Binding Gelecteerdepersoonzijnafspraken}" Grid.Row="4" Grid.Column="1" Margin="20,10,20,10" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="{Binding Agenda.AgendaSoort, Converter={StaticResource AgendaNaarBrushValue}}" BorderThickness="5" CornerRadius="10" Height="115" Width="275">
+                        <StackPanel Margin="10,10,10,10">
+                            <TextBlock Text="{Binding Eigenaar.Naam}" FontWeight="Bold">
+                            <TextBlock Text=" heeft een"></TextBlock>
+                            <TextBlock Text="{Binding AfspraakSoorten.Naam}"></TextBlock>
+                        </TextBlock>
+                            <TextBlock>
+                                <Bold>Titel: </Bold>
+                        <TextBlock Text="{Binding Titel}"></TextBlock>
+                            </TextBlock>
+                            <TextBlock>
+                                <Bold>Begin: </Bold>
+                        <TextBlock Text="{Binding StartTijd}"></TextBlock>
+                            </TextBlock>
+                            <TextBlock>
+                                <Bold>Einde: </Bold>
+                        <TextBlock Text="{Binding EindTijd}"></TextBlock>
+                            </TextBlock>
+                            <TextBlock Text="Agenda soort: "  FontWeight="Bold">
+                        <TextBlock Foreground="{Binding Agenda.AgendaSoort, Converter={StaticResource AgendaNaarBrushValue}}" Text="{Binding Agenda.AgendaSoort}"></TextBlock>
+                    </TextBlock>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

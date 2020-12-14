@@ -1,0 +1,50 @@
+﻿<Window x:Class="AAD.AfspraakBeheer.Wpf.Views.AfspraakBeheerMainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AAD.AfspraakBeheer.Wpf"
+        xmlns:views="clr-namespace:AAD.AfspraakBeheer.Wpf.Views"
+        xmlns:viewmodels="clr-namespace:AAD.AfspraakBeheer.Wpf.ViewModels"
+        mc:Ignorable="d"
+        Title="AfspraakBeheerMainView" Height="700" Width="1100"
+        Background="Transparent" WindowStyle="ToolWindow">
+    <Window.DataContext>
+        <viewmodels:AfspraakBeheerMainViewModel></viewmodels:AfspraakBeheerMainViewModel>
+    </Window.DataContext>
+    <Window.Resources>
+        <local:AfluitenCommand x:Key="afsluitenCommand"></local:AfluitenCommand>
+    </Window.Resources>
+    <Grid>
+        <Border CornerRadius="15">
+            <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#B3B6B7" Offset="0.3"/>
+                        <GradientStop Color="#A9CCE3" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <DockPanel>
+            <Menu IsMainMenu="True" DockPanel.Dock="Top" Background="#1A5276">
+                <MenuItem Header="Bestand" FontWeight="Bold">
+                    <MenuItem Header="Afsluiten" Command="{StaticResource afsluitenCommand}"></MenuItem>
+                </MenuItem>
+                <MenuItem x:Name="mitHelp" Header="_Help" FontWeight="Bold">
+                    <MenuItem x:Name="mitAbout" Header="_About" Command="{Binding HelpCommand}"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+                <TextBlock Name="Time" FontSize="15" VerticalAlignment="Bottom" HorizontalAlignment="Right"></TextBlock>
+            </StackPanel>
+            <Border DockPanel.Dock="Left" BorderBrush="Black" BorderThickness="0,0,1.5,0">
+                <StackPanel VerticalAlignment="Top">
+                    <Button Command="{Binding BeginCommand}" Width="95" Margin="5" Background="#1A5276" FontWeight="SemiBold">Start Pagina</Button>
+                    <Button Command="{Binding PersonenCommand}" Width="95" Margin="5" Background="#1A5276" FontWeight="SemiBold">Personen</Button>
+                    <Button Command="{Binding AfsprakenCommand}" Width="95" Margin="5" Background="#1A5276" FontWeight="SemiBold">Afspraken</Button>
+                    <Button Command="{Binding AfsprakenSoortCommand}" Width="95" Margin="5" Background="#1A5276" FontWeight="SemiBold">Afspraken Soort</Button>
+                </StackPanel>
+            </Border>
+            <ContentControl Content="{Binding GeselecteerdeView}"></ContentControl>
+    </DockPanel>
+        </Grid>
+</Window>

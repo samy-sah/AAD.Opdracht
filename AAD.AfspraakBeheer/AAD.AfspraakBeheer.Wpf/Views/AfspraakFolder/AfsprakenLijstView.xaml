@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="AAD.AfspraakBeheer.Wpf.Views.AfspraakFolder.AfsprakenLijstView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AAD.AfspraakBeheer.Wpf.Views.AfspraakFolder"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <!--<Grid>
+        <DockPanel  LastChildFill="True">
+            <StatusBar DockPanel.Dock="Bottom" Background="Transparent">
+                <TextBox Text="Aantal Afspraken: " Background="Transparent" BorderThickness="0,2"/>
+                <TextBox x:Name="lblAantal" Text="{Binding ElementName=lstPersonen, Path=Items.Count, Mode=OneWay}" Background="Transparent"/>
+            </StatusBar>
+            <Grid DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            </Grid>
+            <TextBlock Text="{Binding Titel}" Margin="10,10,10,10" FontSize="22" DockPanel.Dock="Top"></TextBlock>
+            <ListBox x:Name="lstPersonen" ItemsSource="{Binding Afspraken, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding GeselecteerdeAfspraak}" Grid.Row="1" Margin="10,10,10,10"></ListBox>
+        </DockPanel>
+    </Grid>-->
+    <DockPanel LastChildFill="True">
+        <StatusBar DockPanel.Dock="Bottom" Background="Transparent">
+            <TextBox Text="Aantal Afspraken: " Background="Transparent" BorderThickness="0,2"/>
+            <TextBox x:Name="lblAantal" Text="{Binding ElementName=lstAfspraken, Path=Items.Count, Mode=OneWay}" Background="Transparent"/>
+        </StatusBar>
+        <TextBlock Text="{Binding Titel}" Margin="10,10,10,10" FontSize="22" DockPanel.Dock="Top"></TextBlock>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="1" x:Name="lstAfspraken" ItemsSource="{Binding Afspraken, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding GeselecteerdeAfspraak}" >
+            <ListView.View>
+                <GridView x:Name="grdAf">
+                    <GridViewColumn Header="Eigenaar" DisplayMemberBinding="{Binding Eigenaar.Naam}"  Width="70"/>
+                    <GridViewColumn Header="Agenda Soort" DisplayMemberBinding="{Binding Agenda.Naam}"  Width="80" />
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding  AfspraakId}" Width="25" />
+                    <GridViewColumn Header="Titel" DisplayMemberBinding="{Binding Titel}" Width="110" />
+                    <GridViewColumn Header="StartTijd" DisplayMemberBinding="{Binding StartTijd}" Width="80" />
+                    <GridViewColumn Header="EindTijd" DisplayMemberBinding="{Binding EindTijd}" Width="80" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+       </Grid>
+    </DockPanel>
+</UserControl>

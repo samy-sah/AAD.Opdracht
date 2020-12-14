@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="AAD.AfspraakBeheer.Wpf.Views.AfspraakSoortFolder.AfspraakSoortLijstView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AAD.AfspraakBeheer.Wpf.Views.AfspraakSoortFolder"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel  LastChildFill="True">
+        <StatusBar DockPanel.Dock="Bottom" Background="Transparent">
+            <TextBox Text="Aantal Personen: " Background="Transparent" BorderThickness="0,2"/>
+            <TextBox x:Name="lblAantal" Text="{Binding ElementName=lstAfspraken, Path=Items.Count, Mode=OneWay}" Background="Transparent"/>
+        </StatusBar>
+        <Grid DockPanel.Dock="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+        </Grid>
+        <TextBlock Text="{Binding Titel}" Margin="10,10,10,10" FontSize="22" DockPanel.Dock="Top"></TextBlock>
+        <ListBox x:Name="lstAfspraken" ItemsSource="{Binding AfsprakenSoort}" SelectedItem="{Binding GeselecteerdeAfspraakSoort}" Grid.Row="1" Margin="20,10,20,10"></ListBox>
+    </DockPanel>
+</UserControl>

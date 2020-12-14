@@ -1,0 +1,2 @@
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Business.ConsoleApp\obj\Debug\AAD.AfspraakBeheer.Business.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\sahsa\source\repos\AAD.AfspraakBeheer\AAD.AfspraakBeheer.Business.ConsoleApp\obj\Debug\AAD.AfspraakBeheer.Business.ConsoleApp.csproj.CoreCompileInputs.cache

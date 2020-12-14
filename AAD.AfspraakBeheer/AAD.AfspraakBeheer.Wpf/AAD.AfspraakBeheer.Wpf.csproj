@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42F007D6-AE11-41FF-B1C1-FC63CDF1D9F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AAD.AfspraakBeheer.Wpf</RootNamespace>
+    <AssemblyName>AAD.AfspraakBeheer.Wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=8.0.0.1909, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.8.0.0.1909\lib\net47\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AgendaNaarBrushValue.cs" />
+    <Compile Include="Icon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModels\AfspraakFolder\AfsprakenDetailViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakFolder\AfsprakenLijstViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakFolder\AfsprakenMainViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakBeheerBaseViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakBeheerDetailViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakBeheerMainViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakSoortFolder\AfspraakSoortDetailViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakSoortFolder\AfspraakSoortLijstViewModel.cs" />
+    <Compile Include="ViewModels\AfspraakSoortFolder\AfspraakSoortMainViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\PersonenAfsprakenFolder\PersonenMainViewModel.cs" />
+    <Compile Include="ViewModels\PersonenAfsprakenFolder\PersoonDetailViewModel.cs" />
+    <Compile Include="ViewModels\PersonenAfsprakenFolder\PersoonLijstViewModel.cs" />
+    <Compile Include="ViewModels\StartViewModel.cs" />
+    <Compile Include="Views\AfspraakBeheerMainView.xaml.cs">
+      <DependentUpon>AfspraakBeheerMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakBeheerView.xaml.cs">
+      <DependentUpon>AfspraakBeheerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakSoortFolder\AfspraakSoortDetailView.xaml.cs">
+      <DependentUpon>AfspraakSoortDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakSoortFolder\AfspraakSoortLijstView.xaml.cs">
+      <DependentUpon>AfspraakSoortLijstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakSoortFolder\AfspraakSoortMainView.xaml.cs">
+      <DependentUpon>AfspraakSoortMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakFolder\AfsprakenDetailView.xaml.cs">
+      <DependentUpon>AfsprakenDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakFolder\AfsprakenLijstView.xaml.cs">
+      <DependentUpon>AfsprakenLijstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakFolder\AfsprakenMainView.xaml.cs">
+      <DependentUpon>AfsprakenMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AfspraakSoortFolder\AfspraakSoortToevoegenView.xaml.cs">
+      <DependentUpon>AfspraakSoortToevoegenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HelpView.xaml.cs">
+      <DependentUpon>HelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonenAfsprakenFolder\PersonenMainView.xaml.cs">
+      <DependentUpon>PersonenMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonenAfsprakenFolder\PersoonDetailView.xaml.cs">
+      <DependentUpon>PersoonDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonenAfsprakenFolder\PersoonLijstView.xaml.cs">
+      <DependentUpon>PersoonLijstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartView.xaml.cs">
+      <DependentUpon>StartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AflsuitenCommand.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AfspraakBeheerMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakBeheerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakSoortFolder\AfspraakSoortDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakSoortFolder\AfspraakSoortLijstView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakSoortFolder\AfspraakSoortMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakFolder\AfsprakenDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakFolder\AfsprakenLijstView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakFolder\AfsprakenMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AfspraakSoortFolder\AfspraakSoortToevoegenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PersonenAfsprakenFolder\PersonenMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PersonenAfsprakenFolder\PersoonDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PersonenAfsprakenFolder\PersoonLijstView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AAD.AfspraakBeheer.Business\AAD.AfspraakBeheer.Business.csproj">
+      <Project>{9c60dcc8-8063-4c92-9e58-d40f21b7619c}</Project>
+      <Name>AAD.AfspraakBeheer.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AAD.AfspraakBeheer.Common\AAD.AfspraakBeheer.Common.csproj">
+      <Project>{84826BE2-F71A-440B-8D1E-CDEE68C90A3A}</Project>
+      <Name>AAD.AfspraakBeheer.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AAD.AfspraakBeheer.Data\AAD.AfspraakBeheer.Data.csproj">
+      <Project>{10e4a184-1aa8-4b0a-820b-7349b7f59bc9}</Project>
+      <Name>AAD.AfspraakBeheer.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Kalender1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cal.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
